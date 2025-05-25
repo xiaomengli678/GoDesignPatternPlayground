@@ -103,4 +103,9 @@ func main() {
 	for _, r := range ht.searchForRooms() {
 		fmt.Println(r.id, r.price, r.type_)
 	}
+	fmt.Println("----------")
+	ht.setStrategy(100, general)
+	for _, r := range ht.searchForRooms() {
+		fmt.Println(r.id, r.price, r.type_)
+	}
 }
