@@ -46,7 +46,15 @@ func (c *Cashier) SetStrategy(strategy ChangeStrategy) {
 }
 
 func (c *Cashier) GiveChange(amount int) (map[int]int, error) {
-	return c.strategy.GiveChange(c, amount)
+	c.mu.Lock()
+	strategy := c.strategy
+	c.mu.Unlock()
+
+	if strategy == nil {
+		return nil, fmt.Errorf("no strategy set")
+	}
+	return strategy.GiveChange(c, amount)
+
 }
 
 type GreedyStrategy struct{}
