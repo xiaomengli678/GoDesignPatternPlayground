@@ -1,0 +1,2 @@
+[2025-06-08 16:25:13.488948 -0400 EDT m=+0.000090418] hello world
+[2025-06-08 16:25:13.489031 -0400 EDT m=+0.000173335] this is a simple singleton logger
