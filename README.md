@@ -1,0 +1,1 @@
+Over the past few months, I’ve been diving into Golang by implementing classic design patterns and architectural ideas. This GitHub repo captures some of that journey — from singletons to observers to distributed coordination examples.
